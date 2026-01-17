@@ -3,116 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <title>අධ්‍යාපන ප්‍රතිසංස්කරණ ජාතික මෙහෙයුම - 2026</title>
-    <meta property="og:title" content="අධ්‍යාපන ප්‍රතිසංස්කරණ ජාතික මෙහෙයුම">
-    <meta property="og:description" content="අපේ දරුවන්ගේ අනාගතය වෙනුවෙන් 2026 අධ්‍යාපන ප්‍රතිසංස්කරණ දිනා ගනිමු.">
-    <meta property="og:image" content="https://education-reform2026.github.io/Education-reform2026/classroom.jpg">
-    <meta property="og:url" content="https://education-reform2026.github.io/Education-reform2026/">
-    <meta property="og:type" content="website">
-
+    <title>අධ්‍යාපන ප්‍රතිසංස්කරණ ජාතික මෙහෙයුම</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans Sinhala', sans-serif; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-        .btn-active:active { transform: scale(0.96); }
-        .gradient-overlay { background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 70%, transparent 100%); }
-        /* තිරය තුළ සියල්ල පාලනය කිරීමට */
-        .main-container { max-height: 98vh; overflow: hidden; }
+        body { font-family: 'Noto Sans Sinhala', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .btn-active:active { transform: scale(0.95); transition: 0.1s; }
     </style>
 </head>
-<body onclick="sendEmail('president')" class="bg-slate-100 min-h-screen flex items-center justify-center p-1">
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-1">
 
-    <div class="bg-white max-w-sm w-full rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-200 main-container text-center">
+    <div class="bg-white max-w-sm md:max-w-4xl w-full rounded-[1.5rem] shadow-2xl overflow-hidden border border-slate-200 mx-auto text-center">
         
-        <div class="relative h-40 flex-shrink-0">
-            <img src="classroom.jpg" alt="Classroom" class="w-full h-full object-cover">
-            <div class="absolute inset-0 gradient-overlay flex flex-col justify-end p-4">
-                <h1 class="text-white text-xl font-extrabold leading-tight text-left">
-                    අධ්‍යාපන ප්‍රතිසංස්කරණ <br>
-                    <span class="text-yellow-400 font-black text-2xl">ජාතික මෙහෙයුම</span>
-                </h1>
-            </div>
+        <div class="bg-red-600 p-5 md:p-10 text-white">
+            <h1 class="text-base md:text-3xl font-black leading-tight">
+                2026 වසරේ 6 වසර අධ්‍යාපන ප්‍රතිසංස්කරණ <span class="text-yellow-400 italic font-black text-lg md:text-4xl">ආරම්භ නොවුවහොත්</span>, ඉදිරියේදී සිදු වේ යැයි විශ්වාස කරන්නේ කෙසේද?
+            </h1>
         </div>
 
-        <div class="p-4">
-            <p class="text-[11.5px] font-extrabold mb-3 leading-snug italic text-red-600 px-1">
-                මෙම අධ්‍යාපන ප්‍රතිසංස්කරණ මෙවරත් සිදු නොවුවහොත්, අනාගතයේදී හෝ එය සිදු වේ යැයි විශ්වාස කරන්නේ කෙසේද?
-            </p>
-            
-            <div onclick="event.stopPropagation()" class="mb-3 text-left px-2">
-                <input type="text" id="userName" placeholder="ඔබේ නම (අත්‍යවශ්‍ය නොවේ)" 
-                       class="w-full px-4 py-2.5 rounded-xl border-2 border-slate-100 focus:border-red-500 focus:outline-none text-sm font-semibold shadow-inner bg-slate-50">
+        <div class="p-4 md:p-8">
+            <div class="mb-4 bg-red-50 p-2 md:p-3 rounded-xl border border-red-100 shadow-inner text-center">
+                <p class="text-red-800 font-extrabold text-[10px] md:text-xs tracking-tight uppercase">මෙහෙයුමේ ඉලක්කය:</p>
+                <p class="text-red-600 font-black text-sm md:text-lg tracking-normal">සහයෝගීතාවයන් 100,000</p>
+                <div class="w-full bg-slate-200 h-1.5 mt-2 rounded-full overflow-hidden max-w-[180px] mx-auto">
+                    <div class="bg-red-600 h-full w-[15%]"></div>
+                </div>
             </div>
 
-            <div onclick="event.stopPropagation()" class="bg-blue-50 border border-blue-100 p-2.5 rounded-xl mb-4 text-left flex items-start gap-2 mx-1">
-                <span class="text-lg leading-none">🛡️</span>
-                <p class="text-blue-900 text-[10px] font-bold leading-tight">
-                    ඊමේල් පණිවිඩයේ දත්තවල සහ ඔබගේ රහස්‍යභාවය 100% සුරැකේ. පණිවිඩය ඔබ වෙනුවෙන් සකසා ඇත. එලෙසම හෝ වෙනස් කර ඔබට යැවිය හැක.
-                </p>
+            <div class="mb-5">
+                <input type="text" id="_u_name" placeholder="ඔබේ නම (අත්‍යවශ්‍ය නැත)" class="w-full max-w-[240px] mx-auto block px-3 py-2 rounded-lg border border-slate-200 text-xs md:text-base font-bold bg-slate-50 focus:outline-none focus:border-red-500 shadow-inner">
             </div>
 
-            <div class="space-y-2 mb-5 px-1">
-                <button onclick="event.stopPropagation(); sendEmail('president')" class="btn-active w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-2xl shadow-lg flex items-center justify-center gap-2 text-base border-b-4 border-red-900 transition-all">
-                    📩 ජනාධිපතිතුමාට ඊමේල් කරන්න
-                </button>
-                <button onclick="event.stopPropagation(); sendEmail('pm')" class="btn-active w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3.5 rounded-2xl shadow-lg flex items-center justify-center gap-2 text-base border-b-4 border-blue-900 transition-all">
-                    📩 අග්‍රාමාත්‍යතුමියට ඊමේල් කරන්න
-                </button>
+            <div class="space-y-4 mb-5">
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="_send_mail('pre')" class="btn-active bg-red-600 text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-red-900">📩 ජනාධිපතිට ඊමේල්</button>
+                    <button onclick="_send_mail('pmo')" class="btn-active bg-blue-800 text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-950">📩 අගමැතිට ඊමේල්</button>
+                </div>
+                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium leading-tight px-1 italic">ඊමේල් පණිවිඩය ඔබ වෙනුවෙන් සකසා ඇත. බොත්තම එබූ පසු ලැබෙන තිරයෙන් Gmail තෝරා ඔබේ ඊමේල් එක යවන්න.</p>
+
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="_handle_social('akd')" class="btn-active bg-[#1877F2] text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-800">🔵 ජනාධිපති FB</button>
+                    <button onclick="_handle_social('hni')" class="btn-active bg-[#0866FF] text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-900">🔵 අගමැති FB</button>
+                </div>
+                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium leading-tight px-1 italic">කමෙන්ටුව සකසා ඇත. ඉහත FB පිටුවලට ගොස් කමෙන්ට් එක Paste කරන්න.</p>
             </div>
 
-            <div onclick="event.stopPropagation()" class="flex justify-center gap-6 pt-2 border-t border-slate-100">
-                <button onclick="shareWhatsApp()" class="text-green-600 font-bold text-[11px] flex items-center gap-1">🟢 WhatsApp</button>
-                <button onclick="copyLink()" id="linkBtn" class="text-slate-500 font-bold text-[11px] flex items-center gap-1">🔗 Link එක Copy කරන්න</button>
+            <div class="mb-6">
+                <a id="_pet_link" href="https://www.change.org/p/proceed-with-grade-6-educational-reforms-for-2026-students" target="_blank" class="btn-active inline-flex items-center text-red-600 font-black text-[11px] md:text-lg underline tracking-tighter">✍️ නිල පෙත්සමට අත්සන් තබන්න (Petition)</a>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 w-full max-w-[340px] mx-auto">
+                <button onclick="_share_now('wa')" class="btn-active bg-green-600 text-white font-black py-3 rounded-lg shadow-md flex items-center justify-center gap-1.5 text-[9px] md:text-sm">🟢 WhatsApp</button>
+                <button onclick="_share_now('fb')" class="btn-active bg-[#1877F2] text-white font-black py-3 rounded-lg shadow-md flex items-center justify-center gap-1.5 text-[9px] md:text-sm">🔵 Facebook</button>
             </div>
         </div>
     </div>
 
     <script>
-        const recipients = {
-            president: { to: "president@presidentsoffice.lk", cc: "pm@pmoffice.gov.lk, secretary@moe.gov.lk" },
-            pm: { to: "pm@pmoffice.gov.lk", cc: "secretary@moe.gov.lk, info@moe.gov.lk" }
-        };
+        (function() {
+            const subjects = [
+                "2026 වසරේ 6 ශ්‍රේණි ප්‍රතිසංස්කරණ ක්‍රියාත්මක කිරීමේ ඉල්ලීම",
+                "අධ්‍යාපන ප්‍රතිසංස්කරණ 2026 වසරේදීම ආරම්භ කිරීමට සහය වන්න",
+                "දරුවන්ගේ අනාගතය වෙනුවෙන් 6 ශ්‍රේණි නව විෂය නිර්දේශය ලබා දෙන්න"
+            ];
 
-        const subjects = [
-            "2026 වසරේ 6 ශ්‍රේණි ප්‍රතිසංස්කරණ මෙම වසරේ සිටම ක්‍රියාත්මක කිරීමට කරන ඉල්ලීම",
-            "6 ශ්‍රේණි නව විෂය නිර්දේශය 2026 වර්ෂයේදීම හඳුන්වා දෙන ලෙස කෙරෙන බලකිරීම",
-            "දරුවන්ගේ අනාගතය වෙනුවෙන් 2026 අධ්‍යාපන ප්‍රතිසංස්කරණ ආරම්භ කිරීමේ අත්‍යවශ්‍යතාව"
-        ];
+            const bodies = [
+                "වසර ගණනාවක සිට සැලසුම් කර ඇති 6 ශ්‍රේණියේ නව අධ්‍යාපන ප්‍රතිසංස්කරණ මෙම 2026 වසරේ සිටම අනිවාර්යයෙන්ම ක්‍රියාත්මක කරන ලෙස අපි ඉල්ලා සිටිමු. මෙය ප්‍රමාද කිරීම දරුවන්ට කරන මහත් අසාධාරණයකි.",
+                "2026 වසරේ සිට ක්‍රියාත්මක කිරීමට නියමිත නව අධ්‍යාපන ප්‍රතිසංස්කරණ මාලාව මෙම වසරේදීම ආරම්භ කරන ලෙස ගෞරවයෙන් ඉල්ලා සිටිමු.",
+                "අපේ රටේ අධ්‍යාපන පද්ධතිය නවීකරණය සඳහා හඳුන්වා දීමට නියමිත 2026 ප්‍රතිසංස්කරණ මාලාව පමාවකින් තොරව ක්‍රියාවට නංවන ලෙස කාරුණිකව ඉල්ලා සිටිමු."
+            ];
 
-        const bodies = [
-            "ලක්වැසි දරුවන්ගේ අධ්‍යාපනය නවීකරණය කිරීම වෙනුවෙන් වසර ගණනාවක සිට සැලසුම් කර ඇති 6 ශ්‍රේණියේ නව අධ්‍යාපන ප්‍රතිසංස්කරණ මෙම 2026 වසරේ සිටම අනිවාර්යයෙන්ම ක්‍රියාත්මක කරන ලෙස අපි ඉල්ලා සිටිමු. මේ වන විටත් පන්ති කාමර සූදානම් කර ඇති අතර ගුරුවරුන් ද ඒ සඳහා අවශ්‍ය පුහුණුව ලබා ඇත. මෙය ප්‍රමාද කිරීම දරුවන්ට කරන මහත් අසාධාරණයකි. එබැවින් මෙම වසරේ සිටම දරුවන්ට මෙම ප්‍රතිලාභ ලබා දීමට මැදිහත් වන්න.",
-            "අපේ රටේ අධ්‍යාපන පද්ධතිය නවීකරණය කිරීම සඳහා හඳුන්වා දීමට නියමිත 2026 ප්‍රතිසංස්කරණ මාලාව කිසිදු පමාවකින් තොරව මෙම වසරේ (2026) සිටම ක්‍රියාවට නංවන ලෙස කාරුණිකව ඉල්ලා සිටිමු. විශේෂයෙන්ම 6 ශ්‍රේණියේ දරුවන් වෙනුවෙන් සකස් කළ නව විෂය මාලාවන් 2026 ජනවාරි පාසල් වාරයේ සිටම ලබා දීම අත්‍යවශ්‍ය වේ. මෙය මෙම වසරේ සිටම ක්‍රියාත්මක කිරීමට පියවර ගන්නා ලෙස ඉල්ලමු."
-        ];
+            const gPre = ["ගරු ජනාධිපතිතුමනි,", "ගරු අනුර කුමාර දිසානායක ජනාධිපතිතුමනි,"];
+            const gPmo = ["ගරු අග්‍රාමාත්‍යතුමියනි,", "ගරු හරිනි අමරසූරිය අග්‍රාමාත්‍යතුමියනි,"];
 
-        const signOffRoles = ["දරුවන්ගේ අනාගතය පතන දෙමාපියෙක්", "අධ්‍යාපන වෙනසක් පතන පුරවැසියෙක්", "රට ගැන සිතන මවක් / පියෙක්"];
+            window._send_mail = function(type) {
+                let to, cc, greets;
+                if (type === 'pre') {
+                    to = "president@presidentsoffice.lk";
+                    cc = "ps@presidentsoffice.lk,info@presidentsoffice.lk";
+                    greets = gPre;
+                } else {
+                    to = "pm@pmoffice.gov.lk";
+                    cc = "secretary@pmoffice.gov.lk,info@pmoffice.gov.lk,secretary.education@moe.gov.lk,isuru@moe.gov.lk";
+                    greets = gPmo;
+                }
 
-        function sendEmail(type) {
-            const config = recipients[type];
-            const inputName = document.getElementById('userName').value.trim();
-            const signOff = inputName || signOffRoles[Math.floor(Math.random() * signOffRoles.length)];
-            const randomSub = subjects[Math.floor(Math.random() * subjects.length)];
-            const greetingOptions = {
-                president: ["ගරු ජනාධිපතිතුමනි,", "අතිගරු ජනාධිපතිතුමනි,"],
-                pm: ["ගරු අග්‍රාමාත්‍යතුමියනි,", "ගරු අග්‍රාමාත්‍යතුමිය වෙත,"]
+                const n = document.getElementById('_u_name').value.trim() || "දෙමාපියෙක්";
+                const s = subjects[Math.floor(Math.random() * subjects.length)];
+                const g = greets[Math.floor(Math.random() * greets.length)];
+                const b = bodies[Math.floor(Math.random() * bodies.length)];
+                
+                window.location.href = "mailto:" + to + "?cc=" + cc + "&subject=" + encodeURIComponent(s) + "&body=" + encodeURIComponent(g + "\n\n" + b + "\n\nමෙයට,\n" + n);
             };
-            const randomGreet = greetingOptions[type][Math.floor(Math.random() * greetingOptions[type].length)];
-            const randomBody = bodies[Math.floor(Math.random() * bodies.length)];
-            const refID = Math.floor(1000 + Math.random() * 9000);
-            const finalBody = `${randomGreet}\n\n${randomBody}\n\nමෙයට,\n${signOff}.\n(Ref ID: ${refID})`;
-            window.location.href = `mailto:${config.to}?cc=${config.cc}&subject=${encodeURIComponent(randomSub)}&body=${encodeURIComponent(finalBody)}`;
-        }
 
-        function shareWhatsApp() {
-            const text = encodeURIComponent("අධ්‍යාපන ප්‍රතිසංස්කරණ දිනා ගනිමු! දැන්ම සහය දක්වන්න: " + window.location.href);
-            window.open(`https://wa.me/?text=${text}`, '_blank');
-        }
+            window._handle_social = function(type) {
+                const url = type === 'akd' ? 'https://web.facebook.com/anurakumara/posts' : 'https://web.facebook.com/HariniNPP/posts';
+                const greets = type === 'akd' ? gPre : gPmo;
+                const g = greets[Math.floor(Math.random() * greets.length)];
+                const b = bodies[Math.floor(Math.random() * bodies.length)];
+                navigator.clipboard.writeText(g + " " + b).then(() => { window.open(url, '_blank'); });
+            };
 
-        function copyLink() {
-            navigator.clipboard.writeText(window.location.href);
-            document.getElementById('linkBtn').innerText = "✅ Copied!";
-            setTimeout(() => { document.getElementById('linkBtn').innerText = "🔗 Link එක Copy කරන්න"; }, 2000);
-        }
+            window._share_now = function(type) {
+                const u = window.location.href;
+                const m = encodeURIComponent("දරුවන්ගේ අනාගතය වෙනුවෙන් සහය දක්වන්න: " + u);
+                if (type === 'wa') window.open("https://wa.me/?text=" + m, '_blank');
+                else window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(u), '_blank');
+            };
+        })();
     </script>
 </body>
 </html>

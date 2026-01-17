@@ -39,17 +39,19 @@
                     <button onclick="_send_mail('pre')" class="btn-active bg-red-600 text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-red-900">📩 ජනාධිපතිට ඊමේල්</button>
                     <button onclick="_send_mail('pmo')" class="btn-active bg-blue-800 text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-950">📩 අගමැතිට ඊමේල්</button>
                 </div>
-                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium leading-tight px-1 italic">ඊමේල් පණිවිඩය ඔබ වෙනුවෙන් සකසා ඇත. බොත්තම එබූ පසු ලැබෙන තිරයෙන් Gmail තෝරා ඔබේ ඊමේල් එක යවන්න.</p>
+                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium leading-tight px-1 italic">ඊමේල් පණිවිඩය සකසා ඇත. Gmail තෝරා ඔබේ ඊමේල් එක යවන්න.</p>
 
                 <div class="grid grid-cols-2 gap-2">
                     <button onclick="_handle_social('akd')" class="btn-active bg-[#1877F2] text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-800">🔵 ජනාධිපති FB</button>
                     <button onclick="_handle_social('hni')" class="btn-active bg-[#0866FF] text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-900">🔵 අගමැති FB</button>
                 </div>
-                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium leading-tight px-1 italic">කමෙන්ටුව සකසා ඇත. ඉහත FB පිටුවලට ගොස් කමෙන්ට් එක Paste කරන්න.</p>
+                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium leading-tight px-1 italic">කමෙන්ටුව සකසා ඇත. FB පිටුවේ Paste කරන්න.</p>
             </div>
 
             <div class="mb-6">
-                <a id="_pet_link" href="https://www.change.org/p/proceed-with-grade-6-educational-reforms-for-2026-students" target="_blank" class="btn-active inline-flex items-center text-red-600 font-black text-[11px] md:text-lg underline tracking-tighter">✍️ නිල පෙත්සමට අත්සන් තබන්න (Petition)</a>
+                <a id="_pet_link" href="https://www.change.org/p/proceed-with-grade-6-educational-reforms-for-2026-students" target="_blank" class="btn-active inline-flex items-center text-red-600 font-black text-[12px] md:text-lg underline tracking-tighter">
+                   අධ්‍යාපන ප්‍රතිසංස්කරණ වෙනුවෙන් වූ නිල පෙත්සමට මෙතැනින් අත්සන් තබන්න
+                </a>
             </div>
 
             <div class="pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 w-full max-w-[340px] mx-auto">
@@ -61,6 +63,8 @@
 
     <script>
         (function() {
+            const shortUrl = "https://bit.ly/Education-reform2026";
+
             const subjects = [
                 "2026 වසරේ 6 ශ්‍රේණි ප්‍රතිසංස්කරණ ක්‍රියාත්මක කිරීමේ ඉල්ලීම",
                 "අධ්‍යාපන ප්‍රතිසංස්කරණ 2026 වසරේදීම ආරම්භ කිරීමට සහය වන්න",
@@ -105,10 +109,9 @@
             };
 
             window._share_now = function(type) {
-                const u = window.location.href;
-                const m = encodeURIComponent("දරුවන්ගේ අනාගතය වෙනුවෙන් සහය දක්වන්න: " + u);
-                if (type === 'wa') window.open("https://wa.me/?text=" + m, '_blank');
-                else window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(u), '_blank');
+                const msg = encodeURIComponent("දරුවන්ගේ අනාගතය වෙනුවෙන් සහය දක්වන්න: " + shortUrl);
+                if (type === 'wa') window.open("https://wa.me/?text=" + msg, '_blank');
+                else window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shortUrl), '_blank');
             };
         })();
     </script>

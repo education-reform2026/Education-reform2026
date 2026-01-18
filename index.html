@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>අධ්‍යාපන ප්‍රතිසංස්කරණ ජාතික මෙහෙයුම</title>
+    
+    <meta property="og:title" content="2026 අධ්‍යාපන ප්‍රතිසංස්කරණ ක්‍රියාත්මක කරමු!" />
+    <meta property="og:description" content="දෙමාපියනි, ගුරුවරුනි, මේ ජාතික මෙහෙයුමට ඔබත් එක්වන්න. එක් Click එකකින් ජනාධිපතිට ඊමේල් යවන්න." />
+    <meta property="og:image" content="https://education-reform2026.github.io/Education-reform2026/cover.jpg" />
+    <meta property="og:url" content="https://education-reform2026.github.io/Education-reform2026/" />
+    <meta property="og:type" content="website" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Noto Sans Sinhala', sans-serif; -webkit-tap-highlight-color: transparent; }
         .btn-active:active { transform: scale(0.95); transition: 0.1s; }
-        @keyframes grow { from { width: 0%; } to { width: 20%; } }
+        /* Progress Animation Updated to 60% */
+        @keyframes grow { from { width: 0%; } to { width: 60%; } }
         .progress-fill { animation: grow 3s ease-out forwards; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: 800; }
         .shimmer { background: linear-gradient(90deg, #059669 25%, #34d399 50%, #059669 75%); background-size: 200% 100%; animation: shimmer 2s infinite linear; }
         @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
@@ -17,9 +25,11 @@
 </head>
 <body class="bg-slate-100 min-h-screen flex items-center justify-center p-1">
     <div class="bg-white max-w-sm md:max-w-4xl w-full rounded-[1.5rem] shadow-2xl overflow-hidden border border-slate-200 mx-auto text-center">
+        
         <div class="bg-green-700 p-6 md:p-10 text-white border-b-4 border-green-900">
             <h1 class="text-base md:text-3xl font-black leading-tight uppercase">අධ්‍යාපන ප්‍රතිසංස්කරණ මේ වසරේම ක්‍රියාත්මක කිරීමට <br><span class="text-yellow-400 italic font-black text-lg md:text-4xl uppercase">දෙමාපියනි, ගුරුවරුනි අපි සැවොම එක් වෙමු!</span></h1>
         </div>
+
         <div class="p-4 md:p-8">
             <div class="flex justify-around mb-6 text-[9px] md:text-xs font-bold text-slate-500 uppercase tracking-tighter">
                 <div class="text-center"><span class="bg-green-700 text-white rounded-full h-5 w-5 flex items-center justify-center mx-auto mb-1 font-bold">1</span>බොත්තම ඔබන්න</div>
@@ -33,9 +43,9 @@
             </div>
 
             <div class="mb-6 bg-green-50 p-4 rounded-2xl border border-green-100 shadow-inner">
-                <p class="text-green-800 font-extrabold text-[10px] md:text-xs tracking-tight uppercase mb-2">ගුරු-දෙගුරුන් 1000 කට වඩා එක් වී ඇත</p>
+                <p class="text-green-800 font-extrabold text-[10px] md:text-xs tracking-tight uppercase mb-2">මේ ගමනට ගුරු-දෙගුරුන් 5000 කට වඩා එක් වී ඇත</p>
                 <div class="w-full bg-slate-200 h-6 rounded-full overflow-hidden border border-slate-300 relative">
-                    <div class="progress-fill shimmer h-full rounded-full bg-green-600 shadow-md">20%</div>
+                    <div class="progress-fill shimmer h-full rounded-full bg-green-600 shadow-md">60%</div>
                 </div>
                 <p class="text-[9px] font-bold text-green-700 mt-2 italic uppercase">ඉලක්කය කරා යාමට ඔබත් එක්වන්න!</p>
             </div>
@@ -68,7 +78,7 @@
 
             <div class="pt-4 grid grid-cols-2 gap-3 w-full max-w-[340px] mx-auto">
                 <button onclick="_share_now('wa')" class="btn-active bg-green-600 text-white font-black py-3 rounded-lg shadow-md flex items-center justify-center gap-1.5 text-[9px] md:text-sm uppercase tracking-tighter">🟢 WhatsApp Share</button>
-                <button onclick="_share_now('fb')" class="btn-active bg-[#1877F2] text-white font-black py-3 rounded-lg shadow-md flex items-center justify-center gap-1.5 text-[9px] md:text-sm uppercase tracking-tighter">🔵 FB Share</button>
+                <button onclick="_share_now('fb')" class="btn-active bg-[#1877F2] text-white font-black py-3 rounded-lg shadow-md flex items-center justify-center gap-1.5 text-[9px] md:text-sm uppercase tracking-tighter">🔵 Facebook Share</button>
             </div>
         </div>
     </div>
@@ -95,7 +105,7 @@
             window._handle_social = function(type) {
                 const n = document.getElementById('_u_name').value.trim() || "දෙමාපියෙක්/ගුරුවරයෙක්";
                 const url = type === 'akd' ? 'https://web.facebook.com/anurakumara' : 'https://web.facebook.com/HariniNPP';
-                const msg = "2026 අධ්‍යාපන ප්‍රතිසංස්කරණ පමාවකින් තොරව ක්‍රියාවට නැංවීමට අපි එක් වෙමු! - මෙයට, " + n;
+                const msg = "අධ්‍යාපන ප්‍රතිසංස්කරණ මේ වසරේම ක්‍රියාවට නැංවීමට අපි එක් වෙමු! - මෙයට, " + n;
                 navigator.clipboard.writeText(msg).then(() => { window.open(url, '_blank'); });
             };
             window._share_now = function(type) {

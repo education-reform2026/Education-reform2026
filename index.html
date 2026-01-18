@@ -13,67 +13,113 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
     <style>
         body { font-family: 'Noto Sans Sinhala', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .en-mode { font-family: 'Inter', sans-serif; }
         .btn-active:active { transform: scale(0.95); transition: 0.1s; }
-        /* Progress Animation Updated to 60% */
         @keyframes grow { from { width: 0%; } to { width: 60%; } }
         .progress-fill { animation: grow 3s ease-out forwards; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: 800; }
         .shimmer { background: linear-gradient(90deg, #059669 25%, #34d399 50%, #059669 75%); background-size: 200% 100%; animation: shimmer 2s infinite linear; }
         @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+        .hidden-lang { display: none !important; }
     </style>
 </head>
-<body class="bg-slate-100 min-h-screen flex items-center justify-center p-1">
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-1 relative">
+
+    <div class="absolute top-2 right-2 z-50">
+        <button onclick="toggleLanguage()" id="langBtn" class="bg-white/90 backdrop-blur border border-green-600 text-green-700 px-3 py-1 rounded-full text-[10px] md:text-xs font-bold shadow-sm active:scale-95 transition flex items-center gap-1">
+            🇺🇸 English
+        </button>
+    </div>
+
     <div class="bg-white max-w-sm md:max-w-4xl w-full rounded-[1.5rem] shadow-2xl overflow-hidden border border-slate-200 mx-auto text-center">
-        
         <div class="bg-green-700 p-6 md:p-10 text-white border-b-4 border-green-900">
-            <h1 class="text-base md:text-3xl font-black leading-tight uppercase">අධ්‍යාපන ප්‍රතිසංස්කරණ මේ වසරේම ක්‍රියාත්මක කිරීමට <br><span class="text-yellow-400 italic font-black text-lg md:text-4xl uppercase">දෙමාපියනි, ගුරුවරුනි අපි සැවොම එක් වෙමු!</span></h1>
+            <h1 class="text-base md:text-3xl font-black leading-tight uppercase">
+                <span class="lang-si">අධ්‍යාපන ප්‍රතිසංස්කරණ මේ වසරේම ක්‍රියාත්මක කිරීමට</span>
+                <span class="lang-en hidden-lang">To Implement Education Reforms This Year</span>
+                <br>
+                <span class="text-yellow-400 italic font-black text-lg md:text-4xl uppercase">
+                    <span class="lang-si">දෙමාපියනි, ගුරුවරුනි අපි සැවොම එක් වෙමු!</span>
+                    <span class="lang-en hidden-lang">Parents, Teachers, Let's Unite!</span>
+                </span>
+            </h1>
         </div>
 
         <div class="p-4 md:p-8">
             <div class="flex justify-around mb-6 text-[9px] md:text-xs font-bold text-slate-500 uppercase tracking-tighter">
-                <div class="text-center"><span class="bg-green-700 text-white rounded-full h-5 w-5 flex items-center justify-center mx-auto mb-1 font-bold">1</span>බොත්තම ඔබන්න</div>
-                <div class="text-center"><span class="bg-green-700 text-white rounded-full h-5 w-5 flex items-center justify-center mx-auto mb-1 font-bold">2</span>GMAIL තෝරන්න</div>
-                <div class="text-center"><span class="bg-green-700 text-white rounded-full h-5 w-5 flex items-center justify-center mx-auto mb-1 font-bold">3</span>SEND කරන්න</div>
-            </div>
-
-            <div class="mb-4 flex items-center justify-center gap-1">
-                <span class="text-green-600">🛡️</span>
-                <p class="text-[9px] font-bold text-slate-500 uppercase tracking-tight">100% ඔබේ දත්ත සුරක්ෂිතයි - ඔබ යවන පණිවිඩ අපට ලැබෙන්නේ නැත</p>
+                <div class="text-center">
+                    <span class="bg-green-700 text-white rounded-full h-5 w-5 flex items-center justify-center mx-auto mb-1 font-bold">1</span>
+                    <span class="lang-si">බොත්තම ඔබන්න</span><span class="lang-en hidden-lang">Tap Button</span>
+                </div>
+                <div class="text-center">
+                    <span class="bg-green-700 text-white rounded-full h-5 w-5 flex items-center justify-center mx-auto mb-1 font-bold">2</span>
+                    <span class="lang-si">GMAIL තෝරන්න</span><span class="lang-en hidden-lang">Select Gmail</span>
+                </div>
+                <div class="text-center">
+                    <span class="bg-green-700 text-white rounded-full h-5 w-5 flex items-center justify-center mx-auto mb-1 font-bold">3</span>
+                    <span class="lang-si">SEND කරන්න</span><span class="lang-en hidden-lang">Click Send</span>
+                </div>
             </div>
 
             <div class="mb-6 bg-green-50 p-4 rounded-2xl border border-green-100 shadow-inner">
-                <p class="text-green-800 font-extrabold text-[10px] md:text-xs tracking-tight uppercase mb-2">මේ ගමනට ගුරු-දෙගුරුන් 5000 කට වඩා එක් වී ඇත</p>
+                <p class="text-green-800 font-extrabold text-[10px] md:text-xs tracking-tight uppercase mb-2">
+                    <span class="lang-si">මේ ගමනට ගුරු-දෙගුරුන් 5000 කට වඩා එක් වී ඇත</span>
+                    <span class="lang-en hidden-lang">Over 5000 Parents & Teachers have joined</span>
+                </p>
                 <div class="w-full bg-slate-200 h-6 rounded-full overflow-hidden border border-slate-300 relative">
                     <div class="progress-fill shimmer h-full rounded-full bg-green-600 shadow-md">60%</div>
                 </div>
-                <p class="text-[9px] font-bold text-green-700 mt-2 italic uppercase">ඉලක්කය කරා යාමට ඔබත් එක්වන්න!</p>
+                <p class="text-[9px] font-bold text-green-700 mt-2 italic uppercase">
+                    <span class="lang-si">ඉලක්කය කරා යාමට ඔබත් එක්වන්න!</span>
+                    <span class="lang-en hidden-lang">Join us to reach the goal!</span>
+                </p>
             </div>
 
             <div class="mb-5">
                 <input type="text" id="_u_name" placeholder="ඔබේ නම (අත්‍යවශ්‍ය නොවේ)" class="w-full max-w-[240px] mx-auto block px-3 py-2 rounded-lg border border-slate-200 text-xs md:text-base font-bold text-center bg-slate-50 focus:outline-none focus:border-green-500 shadow-inner">
-                <p class="text-[8px] md:text-[9px] text-slate-400 mt-1 font-medium italic">පණිවිඩය ඔබේ නමින් යැවීමට අවශ්‍ය නම් පමණක් නම ඇතුළත් කරන්න</p>
             </div>
 
             <div class="space-y-4 mb-5">
                 <div class="grid grid-cols-2 gap-2">
-                    <button onclick="_send_mail('pre')" class="btn-active bg-green-700 text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-green-900 uppercase">📩 ජනාධිපතිට</button>
-                    <button onclick="_send_mail('pmo')" class="btn-active bg-blue-800 text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-950 uppercase">📩 අගමැතිට</button>
+                    <button onclick="_send_mail('pre')" class="btn-active bg-green-700 text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-green-900 uppercase">
+                        <span class="lang-si">📩 ජනාධිපතිට</span><span class="lang-en hidden-lang">📩 To President</span>
+                    </button>
+                    <button onclick="_send_mail('pmo')" class="btn-active bg-blue-800 text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-950 uppercase">
+                        <span class="lang-si">📩 අගමැතිට</span><span class="lang-en hidden-lang">📩 To PM</span>
+                    </button>
                 </div>
-                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium italic mb-2 tracking-tighter">ඊමේල් පණිවිඩය සකසා ඇත. Gmail තෝරා Send කරන්න.</p>
+                
+                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium italic mb-2 tracking-tighter">
+                    <span class="lang-si">ඊමේල් පණිවිඩය සකසා ඇත. Gmail තෝරා Send කරන්න.</span>
+                    <span class="lang-en hidden-lang">Email drafted. Select Gmail and Send.</span>
+                </p>
+
                 <div class="grid grid-cols-2 gap-2">
-                    <button onclick="_handle_social('akd')" class="btn-active bg-[#1877F2] text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-800 uppercase">🔵 ජනාධිපති FB</button>
-                    <button onclick="_handle_social('hni')" class="btn-active bg-[#0866FF] text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-900 uppercase">🔵 අගමැති FB</button>
+                    <button onclick="_handle_social('akd')" class="btn-active bg-[#1877F2] text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-800 uppercase">
+                        <span class="lang-si">🔵 ජනාධිපති FB</span><span class="lang-en hidden-lang">🔵 President FB</span>
+                    </button>
+                    <button onclick="_handle_social('hni')" class="btn-active bg-[#0866FF] text-white font-black py-4 rounded-xl shadow-lg text-[10px] md:text-lg border-b-4 border-blue-900 uppercase">
+                        <span class="lang-si">🔵 අගමැති FB</span><span class="lang-en hidden-lang">🔵 PM FB</span>
+                    </button>
                 </div>
-                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium italic tracking-tighter">කමෙන්ටුව Copy කර ඇත. FB පිටුවේ Paste කරන්න.</p>
+
+                <p class="text-[8.5px] md:text-xs text-slate-500 font-medium italic tracking-tighter">
+                    <span class="lang-si">කමෙන්ටුව Copy කර ඇත. FB පිටුවේ Paste කරන්න.</span>
+                    <span class="lang-en hidden-lang">Comment copied. Paste on FB page.</span>
+                </p>
             </div>
 
             <div class="mb-6 pt-2 border-t border-slate-100 space-y-2">
-                <div class="flex items-center justify-center gap-2">
-                    <a href="https://www.change.org/p/proceed-with-grade-6-educational-reforms-for-2026-students" target="_blank" class="btn-active text-green-700 font-bold text-[10px] md:text-sm underline tracking-tighter italic">නිල පෙත්සමට මෙතැනින් අත්සන් තබන්න</a>
-                    <span class="text-[7px] md:text-[9px] text-slate-400 font-bold bg-slate-100 px-2 py-0.5 rounded-full border border-slate-200">මීළඟ ඉලක්කය: අත්සන් 20,000</span>
-                </div>
-                <p class="text-[9px] md:text-[11px] text-red-600 font-black leading-tight bg-red-50 p-2 rounded-lg border border-red-100 animate-pulse uppercase">📢 19 සඳුදා රට පුරා පැවැත්වෙන සාමකාමී උද්ඝෝෂණ සඳහා ඔබත් එක් වන්න.</p>
+                <a href="https://www.change.org/p/proceed-with-grade-6-educational-reforms-for-2026-students" target="_blank" class="btn-active text-green-700 font-bold text-[10px] md:text-sm underline tracking-tighter italic block">
+                        <span class="lang-si">නිල පෙත්සමට මෙතැනින් අත්සන් තබන්න</span>
+                        <span class="lang-en hidden-lang">Click here to sign the petition</span>
+                </a>
+                <p class="text-[9px] md:text-[11px] text-red-600 font-black leading-tight bg-red-50 p-2 rounded-lg border border-red-100 animate-pulse uppercase">
+                    <span class="lang-si">📢 19 සඳුදා රට පුරා පැවැත්වෙන සාමකාමී උද්ඝෝෂණ සඳහා ඔබත් එක් වන්න.</span>
+                    <span class="lang-en hidden-lang">📢 Join the peaceful protests island-wide this Monday (19th).</span>
+                </p>
             </div>
 
             <div class="pt-4 grid grid-cols-2 gap-3 w-full max-w-[340px] mx-auto">
@@ -86,28 +132,72 @@
     <script>
         (function() {
             const directUrl = "https://education-reform2026.github.io/Education-reform2026/";
-            window._send_mail = function(type) {
-                const n = document.getElementById('_u_name').value.trim() || "දෙමාපියෙක්/ගුරුවරයෙක්";
-                let to, cc, s, b;
-                if (type === 'pre') {
-                    to = "president@presidentsoffice.lk";
-                    cc = "ps@presidentsoffice.lk,info@presidentsoffice.lk";
-                    s = "2026 වසරේ 6 ශ්‍රේණි නව අධ්‍යාපන ප්‍රතිසංස්කරණ පමාවකින් තොරව ක්‍රියාවට නැංවීමට මැදිහත් වන්න";
-                    b = "ගරු ජනාධිපතිතුමනි,\n\n2026 වසරේ සිට ක්‍රියාත්මක කිරීමට සැලසුම් කර ඇති 6 ශ්‍රේණි නව අධ්‍යාපන ප්‍රතිසංස්කරණ හා නව විෂය නිර්දේශය කිසිදු ප්‍රමාදයකින් තොරව ක්‍රියාවට නැංවීම දරුවන්ගේ අනාගතය වෙනුවෙන් ගනු ලබන ඉතා වැදගත් පියවරකි. මෙම වැඩපිළිවෙළ අඛණ්ඩව ඉදිරියට ගෙන යාමට අවශ්‍ය කටයුතු සම්පාදනය කරන ලෙස ගෞරවයෙන් ඉල්ලා සිටිමු.\n\nමෙයට,\n" + n;
+            let currentLang = 'si';
+
+            window.toggleLanguage = function() {
+                const btn = document.getElementById('langBtn');
+                const nameInput = document.getElementById('_u_name');
+                const siElements = document.querySelectorAll('.lang-si');
+                const enElements = document.querySelectorAll('.lang-en');
+
+                if (currentLang === 'si') {
+                    siElements.forEach(el => el.classList.add('hidden-lang'));
+                    enElements.forEach(el => el.classList.remove('hidden-lang'));
+                    document.body.classList.add('en-mode');
+                    btn.innerHTML = "🇱🇰 සිංහල";
+                    nameInput.placeholder = "Your Name (Optional)";
+                    currentLang = 'en';
                 } else {
-                    to = "pm@pmoffice.gov.lk";
-                    cc = "secretary@pmoffice.gov.lk,info@pmoffice.gov.lk,secretary.education@moe.gov.lk,isuru@moe.gov.lk";
-                    s = "අධ්‍යාපන ප්‍රතිසංස්කරණ ජාතික වැඩපිළිවෙළ 2026 වසරේදීම ආරම්භ කිරීමට සහය වන්න";
-                    b = "ගරු අග්‍රාමාත්‍යතුමියනි,\n\nනූතන ලෝකයට ගැළපෙන පරිදි සකස් කරන ලද 6 ශ්‍රේණි නව විෂය මාලාව 2026 අධ්‍යයන වර්ෂයේ සිටම මෙරට දරුවන්ට ලබා දීම කාලීන අවශ්‍යතාවයකි. මෙම ජාතික මෙහෙවර කිසිදු බාධාවකින් තොරව නියමිත පරිදි ඉටු කිරීමට ඔබතුමියගේ සෘජු අවධානය සහ සහයෝගය අපේක්ෂා කරමු.\n\nමෙයට,\n" + n;
+                    enElements.forEach(el => el.classList.add('hidden-lang'));
+                    siElements.forEach(el => el.classList.remove('hidden-lang'));
+                    document.body.classList.remove('en-mode');
+                    btn.innerHTML = "🇺🇸 English";
+                    nameInput.placeholder = "ඔබේ නම (අත්‍යවශ්‍ය නොවේ)";
+                    currentLang = 'si';
+                }
+            };
+
+            window._send_mail = function(type) {
+                const n = document.getElementById('_u_name').value.trim();
+                let to, cc, s, b;
+
+                if (currentLang === 'si') {
+                    const name = n || "දෙමාපියෙක්/ගුරුවරයෙක්";
+                    if (type === 'pre') {
+                        to = "president@presidentsoffice.lk";
+                        cc = "ps@presidentsoffice.lk,info@presidentsoffice.lk";
+                        s = "2026 වසරේ 6 ශ්‍රේණි නව අධ්‍යාපන ප්‍රතිසංස්කරණ පමාවකින් තොරව ක්‍රියාවට නැංවීමට මැදිහත් වන්න";
+                        b = "ගරු ජනාධිපතිතුමනි,\n\n2026 වසරේ සිට ක්‍රියාත්මක කිරීමට සැලසුම් කර ඇති 6 ශ්‍රේණි නව අධ්‍යාපන ප්‍රතිසංස්කරණ හා නව විෂය නිර්දේශය කිසිදු ප්‍රමාදයකින් තොරව ක්‍රියාවට නැංවීම දරුවන්ගේ අනාගතය වෙනුවෙන් ගනු ලබන ඉතා වැදගත් පියවරකි. මෙම වැඩපිළිවෙළ අඛණ්ඩව ඉදිරියට ගෙන යාමට අවශ්‍ය කටයුතු සම්පාදනය කරන ලෙස ගෞරවයෙන් ඉල්ලා සිටිමු.\n\nමෙයට,\n" + name;
+                    } else {
+                        to = "secpm@pmoffice.gov.lk";
+                        cc = "pmoffice@sltnet.lk,info@pmoffice.gov.lk,secretary.education@moe.gov.lk,isuru@moe.gov.lk";
+                        s = "අධ්‍යාපන ප්‍රතිසංස්කරණ ජාතික වැඩපිළිවෙළ 2026 වසරේදීම ආරම්භ කිරීමට සහය වන්න";
+                        b = "ගරු අග්‍රාමාත්‍යතුමියනි,\n\nනූතන ලෝකයට ගැළපෙන පරිදි සකස් කරන ලද 6 ශ්‍රේණි නව විෂය මාලාව 2026 අධ්‍යයන වර්ෂයේ සිටම මෙරට දරුවන්ට ලබා දීම කාලීන අවශ්‍යතාවයකි. මෙම ජාතික මෙහෙවර කිසිදු බාධාවකින් තොරව නියමිත පරිදි ඉටු කිරීමට ඔබතුමියගේ සෘජු අවධානය සහ සහයෝගය අපේක්ෂා කරමු.\n\nමෙයට,\n" + name;
+                    }
+                } else {
+                    const name = n || "A Parent/Teacher";
+                    if (type === 'pre') {
+                        to = "president@presidentsoffice.lk";
+                        cc = "ps@presidentsoffice.lk,info@presidentsoffice.lk";
+                        s = "Intervene to implement 2026 Grade 6 Education Reforms without delay";
+                        b = "Dear Mr. President,\n\nImplementing the new Grade 6 educational reforms and curriculum planned for 2026 is a vital step for our children's future. We respectfully request you to intervene and ensure this national mission proceeds without any further delays.\n\nSincerely,\n" + name;
+                    } else {
+                        to = "secpm@pmoffice.gov.lk";
+                        cc = "pmoffice@sltnet.lk,info@pmoffice.gov.lk,secretary.education@moe.gov.lk,isuru@moe.gov.lk";
+                        s = "Support to commence National Education Reforms in 2026";
+                        b = "Dear Madam Prime Minister,\n\nProviding the modern Grade 6 curriculum to our children from the 2026 academic year is a timely necessity. We look forward to your direct attention and support to complete this national task as scheduled.\n\nSincerely,\n" + name;
+                    }
                 }
                 window.location.href = "mailto:" + to + "?cc=" + cc + "&subject=" + encodeURIComponent(s) + "&body=" + encodeURIComponent(b);
             };
+
             window._handle_social = function(type) {
                 const n = document.getElementById('_u_name').value.trim() || "දෙමාපියෙක්/ගුරුවරයෙක්";
                 const url = type === 'akd' ? 'https://web.facebook.com/anurakumara' : 'https://web.facebook.com/HariniNPP';
                 const msg = "අධ්‍යාපන ප්‍රතිසංස්කරණ මේ වසරේම ක්‍රියාවට නැංවීමට අපි එක් වෙමු! - මෙයට, " + n;
                 navigator.clipboard.writeText(msg).then(() => { window.open(url, '_blank'); });
             };
+
             window._share_now = function(type) {
                 const msg = "2026 අධ්‍යාපන ප්‍රතිසංස්කරණ පමාවකින් තොරව ක්‍රියාවට නැංවීමට එක් වෙමු! සහය දක්වන්න: \n" + directUrl;
                 if (type === 'wa') window.open("https://wa.me/?text=" + encodeURIComponent(msg), '_blank');
